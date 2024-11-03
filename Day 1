@@ -1,0 +1,93 @@
+                                                           
+                                                                         Day 1: Introduction to SQL
+                                                                                                                                                                                                                 Notes for Mishra Tech Hub 
+Objectives 
+* Understand the fundamentals of SQL.
+* Learn basic SQL syntax and database structure.
+* Create a simple database and a table.
+  What is SQL?
+* Structured Query Language (SQL): A standard programming language specifically designed for managing and manipulating relational databases.
+* Key Functions:
+    * Querying data
+    * Inserting records
+    * Updating existing records
+    * Deleting records 
+Importance of SQL
+* Essential for data analysis, application development, and database management.
+* Enables efficient data manipulation and retrieval from databases.
+
+
+
+
+Overview of Databases
+* Relational Databases: Store data in structured tables that can be linked through relationships (e.g., primary and foreign keys).
+* Common Database Management Systems:
+    * MySQL: Open-source and widely used for web applications.
+    * PostgreSQL: Open-source with advanced features.
+    * SQLite: Lightweight, serverless database ideal for smaller projects.
+    * Microsoft SQL Server: A robust system commonly used in enterprise environments.
+
+
+
+                                                                                Basic SQL Syntax
+
+Types of SQL Statements
+1. Data Query Language (DQL): Used to query data.
+    * Example: SELECT
+2. Data Manipulation Language (DML): Used to manipulate data.
+    * Examples: INSERT, UPDATE, DELETE
+3. Data Definition Language (DDL): Used to define and manage database structures.
+    * Examples: CREATE, ALTER, DROP
+    * 
+Common SQL Data Types
+* INT: Integer values
+* VARCHAR(n): Variable-length string, where n specifies the maximum length
+* DATE: Date values
+* FLOAT: Floating-point numbers for decimal values
+
+
+
+                                        Practical Exercises
+
+
+Setting Up Your Environment
+
+* Install a SQL Database: Choose a DBMS (e.g., SQLite or MySQL) and follow the installation instructions.
+* Use a SQL Client: Connect to your database using clients like DBeaver or MySQL Workbench.
+Creating a Database and Table
+
+1. Create a Database:  CREATE DATABASE your_database_name;   
+2. Use the Database:  USE your_database_name;  
+3. Create a Table:  CREATE TABLE users ( user_id INT PRIMARY KEY, username VARCHAR(50), email VARCHAR(100), created_at DATE );  Practical Exercises 
+* Setting Up Your Environment:
+    * Install a SQL Database Management System (DBMS) of your choice (SQLite, MySQL, etc.).
+    * Use a SQL client like DBeaver or MySQL Workbench to connect to your DBMS. 
+* Hands-on Exercise:
+    * Follow these steps:
+        1. Create a new database named mishra_tech_hub.
+        2. Switch to that database.
+        3. Create a table named employees with the following columns:
+            * employee_id (INT, Primary Key)
+            * first_name (VARCHAR(50))
+            * last_name (VARCHAR(50))
+            * hire_date (DATE)
+ 	◦	CREATE DATABASE mishra_tech_hub;
+    * USE mishra_tech_hub;  
+    * CREATE TABLE employees (
+    *     employee_id INT PRIMARY KEY,
+    *     first_name VARCHAR(50),
+    *     last_name VARCHAR(50),
+    *     hire_date DATE
+    * );    Recap and Questions
+* Recap:
+    * You learned about SQL and its importance, the basics of relational databases, and how to set up your environment.
+    * You also practiced creating a database and a table using SQL syntax.
+* Questions to Consider:
+    * What are the different types of SQL statements, and how do they differ?
+    * Why is it important to choose appropriate data types when creating tables?
+    * How can relationships between tables enhance data management?
+* Next Steps
+In the next session, we will explore data manipulation with SQL, including how to insert, update, and delete records in your newly created tables.   You're welcome! If you have any questions or need further assistance with SQL or anything else related to Mishra Tech Hub, feel free to ask. Happy learning!
+  
+
+   
