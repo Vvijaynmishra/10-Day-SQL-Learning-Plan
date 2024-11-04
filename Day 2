@@ -1,0 +1,55 @@
+ Data Manipulation with SQL
+
+Objectives
+Learn how to manipulate data within SQL tables.
+Practice inserting, updating, and deleting records.
+Understand and practice using WHERE clauses for targeted data manipulation.
+
+ # Recap of Day 1
+Reviewed SQL fundamentals and database structures.
+Practiced creating a database and tables.
+SQL Data Manipulation (DML) Overview
+SQL’s DML (Data Manipulation Language) allows you to modify data within tables. Common DML statements include:
+
+INSERT: Adds new records to a table.
+UPDATE: Modifies existing records in a table.
+DELETE: Removes records from a table.
+
+
+  Basic DML Commands
+INSERT INTO
+  INSERT INTO table_name (column1, column2, ...) VALUES (value1, value2, ...);
+Exmaple:
+INSERT INTO employees (employee_id, first_name, last_name, hire_date) 
+VALUES (1, 'John', 'Doe', '2023-01-15');
+UPDATE:
+UPDATE table_name SET column1 = value1, column2 = value2, ... WHERE condition;
+Ex:
+UPDATE employees SET first_name = 'Jane' WHERE employee_id = 1;
+DELETE FROM:
+DELETE FROM table_name WHERE condition;
+ex:
+DELETE FROM employees WHERE employee_id = 1;
+
+The WHERE Clause
+The WHERE clause is essential for targeting specific rows.
+SELECT * FROM table_name WHERE condition;
+
+  Practical Exercises
+Insert Data into the employees Table:
+
+Add multiple employee records with varying hire dates.
+Update Data in the employees Table:
+
+Change the last name of an employee.
+Update hire dates for employees hired before a certain date.
+Delete Data from the employees Table:
+
+Remove an employee record based on employee_id.
+Challenge:
+
+Try using WHERE with conditions like AND, OR, >, < to target specific records.
+Recap and Questions
+What are the primary DML statements, and how do they work?
+Why is the WHERE clause important when updating or deleting records?
+How can you use conditions to filter records in a table?
