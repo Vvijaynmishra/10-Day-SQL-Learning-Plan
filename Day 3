@@ -1,0 +1,105 @@
+Day 3: Data Querying and Joins in SQL
+Objectives
+Learn how to retrieve specific data using queries.
+Understand and practice different types of joins for combining data from multiple tables.
+Explore filtering, sorting, and grouping data for efficient querying.
+
+Practiced data manipulation using SQL statements like INSERT, UPDATE, and DELETE.
+Learned to use the WHERE clause for targeted data operations.
+
+Data Querying with SQL
+SELECT Statement
+
+Used to retrieve data from a table.
+SELECT column1, column2, ... FROM table_name WHERE condition;
+
+
+Example:
+SELECT first_name, last_name FROM employees WHERE hire_date > '2022-01-01';
+
+Sorting Results with ORDER BY
+
+Allows sorting query results in ascending (ASC) or descending (DESC) order.
+
+SELECT column1, column2 FROM table_name ORDER BY column1 ASC|DESC;
+
+Example:
+SELECT * FROM employees ORDER BY hire_date DESC;
+
+Filtering and Aggregation with GROUP BY and HAVING
+
+GROUP BY groups rows that have the same values in specified columns.
+HAVING is used to filter aggregated data.
+
+SELECT column1, COUNT(column2) FROM table_name GROUP BY column1 HAVING COUNT(column2) > 1;
+
+Example:
+SELECT hire_date, COUNT(employee_id) FROM employees GROUP BY hire_date HAVING COUNT(employee_id) > 1;
+
+SELECT column1, COUNT(column2) FROM table_name GROUP BY column1 HAVING COUNT(column2) > 1;
+
+Example:
+SELECT hire_date, COUNT(employee_id) FROM employees GROUP BY hire_date HAVING COUNT(employee_id) > 1;
+
+Introduction to Joins
+Joins allow combining data from multiple tables based on related columns.
+
+Types of Joins:
+
+INNER JOIN: Returns records that have matching values in both tables.
+LEFT JOIN (or LEFT OUTER JOIN): Returns all records from the left table and matched records from the right table. Non-matched records in the right table return NULL.
+RIGHT JOIN (or RIGHT OUTER JOIN): Returns all records from the right table and matched records from the left table. Non-matched records in the left table return NULL.
+FULL JOIN (or FULL OUTER JOIN): Returns all records when there is a match in either left or right table.
+
+Syntax of JOINs:
+SELECT table1.column1, table2.column2
+FROM table1
+JOIN table2
+ON table1.common_column = table2.common_column;
+
+Practical Examples of Joins
+
+CREATE TABLE departments (
+    department_id INT PRIMARY KEY,
+    department_name VARCHAR(50)
+);
+
+INNER JOIN Example:
+
+SELECT employees.first_name, employees.last_name, departments.department_name
+FROM employees
+INNER JOIN departments ON employees.department_id = departments.department_id;
+
+LEFT JOIN Example:
+
+SELECT employees.first_name, employees.last_name, departments.department_name
+FROM employees
+LEFT JOIN departments ON employees.department_id = departments.department_id;
+
+RIGHT JOIN Example:
+
+SELECT employees.first_name, employees.last_name, departments.department_name
+FROM employees
+RIGHT JOIN departments ON employees.department_id = departments.department_id;
+
+FULL JOIN Example:
+
+SELECT employees.first_name, employees.last_name, departments.department_name
+FROM employees
+FULL JOIN departments ON employees.department_id = departments.department_id;
+
+
+Practical Exercises
+Basic Querying:
+
+Retrieve a list of employees hired after a specific date, sorted by hire date.
+List all departments and the number of employees in each (using GROUP BY and HAVING).
+Using Joins:
+
+Create a departments table with sample data and practice inner, left, right, and full joins.
+Write a query to show all employees with their department names, including employees who may not be assigned a department.
+Recap and Questions
+What are the different types of joins, and when would you use each one?
+How does the WHERE clause differ from the HAVING clause in filtering?
+How can sorting and grouping data improve query results?
+
